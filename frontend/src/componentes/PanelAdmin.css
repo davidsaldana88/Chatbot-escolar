@@ -1,0 +1,393 @@
+.panel {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  min-height: 100dvh;
+}
+
+.panel__menu {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding: 20px 16px;
+  background: var(--superficie);
+  border-right: 1px solid var(--borde);
+}
+
+.panel__marca {
+  display: flex;
+  flex-direction: column;
+}
+
+.panel__marca span {
+  font-size: 0.85rem;
+  color: var(--texto-suave);
+}
+
+.panel__menu nav {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  flex: 1;
+}
+
+.panel__menu a {
+  padding: 8px 12px;
+  border-radius: 8px;
+  color: var(--texto);
+  text-decoration: none;
+}
+
+.panel__menu a:hover {
+  background: var(--burbuja-bot);
+}
+
+.panel__menu a.active {
+  background: var(--acento);
+  color: var(--acento-texto);
+}
+
+.panel__menu a:focus-visible {
+  outline: 2px solid var(--acento);
+  outline-offset: 2px;
+}
+
+.panel__chat {
+  border: 1px solid var(--borde);
+  text-align: center;
+}
+
+.panel__contenido {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  min-width: 0;
+}
+
+.encabezado-pagina h1 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+.encabezado-pagina p {
+  margin: 4px 0 0;
+  color: var(--texto-suave);
+  max-width: 70ch;
+}
+
+.indicadores {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 12px;
+}
+
+.indicador {
+  display: flex;
+  flex-direction: column;
+  padding: 14px 16px;
+  background: var(--superficie);
+  border: 1px solid var(--borde);
+  border-radius: 12px;
+}
+
+.indicador--destacado {
+  border-color: var(--acento);
+}
+
+.indicador__valor {
+  font-size: 1.8rem;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.indicador__titulo {
+  font-size: 0.85rem;
+  color: var(--texto-suave);
+}
+
+.columnas {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.tarjeta {
+  padding: 16px 20px;
+  background: var(--superficie);
+  border: 1px solid var(--borde);
+  border-radius: 12px;
+}
+
+.tarjeta h2 {
+  margin: 0 0 12px;
+  font-size: 1.05rem;
+}
+
+.vacio {
+  margin: 0;
+  color: var(--texto-suave);
+}
+
+.barras,
+.lista-simple {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.barras {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.barras li {
+  display: grid;
+  grid-template-columns: 110px 1fr 32px;
+  align-items: center;
+  gap: 10px;
+}
+
+.barras__pista {
+  height: 10px;
+  background: var(--burbuja-bot);
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.barras__relleno {
+  display: block;
+  height: 100%;
+  background: var(--acento);
+  border-radius: 999px;
+}
+
+.barras__valor {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+.lista-simple {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.lista-simple li {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.etiqueta {
+  padding: 1px 8px;
+  border-radius: 999px;
+  background: var(--burbuja-bot);
+  font-size: 0.8rem;
+}
+
+.etiqueta--activa {
+  background: var(--acento);
+  color: var(--acento-texto);
+}
+
+.tabla {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.tabla th,
+.tabla td {
+  padding: 8px 10px;
+  text-align: left;
+  border-bottom: 1px solid var(--borde);
+}
+
+.tabla th {
+  font-size: 0.85rem;
+  color: var(--texto-suave);
+  font-weight: 500;
+}
+
+.aviso {
+  margin: 0;
+  padding: 10px 14px;
+  border-radius: 8px;
+  background: var(--burbuja-bot);
+}
+
+.aviso--error {
+  color: var(--error);
+}
+
+.aviso--exito {
+  border: 1px solid var(--acento);
+}
+
+.formulario {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  gap: 12px;
+}
+
+.formulario label {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: 0.85rem;
+  color: var(--texto-suave);
+}
+
+.formulario input,
+.formulario select {
+  padding: 8px 10px;
+  border: 1px solid var(--borde);
+  border-radius: 8px;
+  background: var(--fondo);
+  color: var(--texto);
+}
+
+.panel__contenido button {
+  padding: 8px 16px;
+  border: 0;
+  border-radius: 8px;
+  background: var(--acento);
+  color: var(--acento-texto);
+  cursor: pointer;
+}
+
+.panel__contenido button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.panel__contenido button:focus-visible,
+.formulario input:focus-visible,
+.formulario select:focus-visible {
+  outline: 2px solid var(--acento);
+  outline-offset: 2px;
+}
+
+.solo-lectores {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+@media (max-width: 720px) {
+  .panel {
+    grid-template-columns: 1fr;
+  }
+
+  .panel__menu {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 12px;
+    border-right: 0;
+    border-bottom: 1px solid var(--borde);
+  }
+
+  .panel__menu nav {
+    flex-direction: row;
+    flex: 1;
+  }
+
+  .panel__contenido {
+    padding: 16px;
+  }
+
+  .tabla {
+    display: block;
+    overflow-x: auto;
+  }
+}
+
+/* ---------- Opiniones ---------- */
+.pestanas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.panel__contenido .pestana {
+  background: transparent;
+  color: var(--texto);
+  border: 1px solid var(--borde);
+  border-radius: 999px;
+}
+
+.panel__contenido .pestana--activa {
+  background: var(--acento);
+  color: var(--acento-texto);
+  border-color: var(--acento);
+}
+
+.opiniones {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.opinion-tarjeta__cabecera {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 4px 16px;
+}
+
+.opinion-tarjeta__cabecera span:nth-child(2) {
+  color: var(--texto-suave);
+}
+
+.estrellas {
+  color: var(--acento);
+  letter-spacing: 2px;
+}
+
+.opinion-tarjeta__comentario {
+  margin: 10px 0;
+}
+
+.opinion-tarjeta__pie {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+/* ---------- Materias y profesores ---------- */
+.tabla input[type='text'],
+.tabla input[type='email'] {
+  width: 100%;
+  min-width: 9rem;
+}
+
+.tabla input[type='checkbox'] {
+  width: 1rem;
+  height: 1rem;
+  padding: 0;
+}
+
+.panel__salir {
+  margin-top: 8px;
+  padding: 8px 12px;
+  border: 1px solid var(--borde);
+  border-radius: 8px;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  cursor: pointer;
+}
+
+.panel__salir:hover {
+  background: var(--burbuja-bot);
+}
